@@ -27,7 +27,9 @@ open index.html
 
 No build process, no dependencies. Clean, organized code structure ready for deployment.
 
-**[View it live →](https://kimiya00.github.io/kimiya-razdar-portfolio)**
+**[Live Portfolio →](https://vercel.com/kimiyas-projects-063192c8/real-estate-ai-app)**
+
+**[GitHub Repository](https://kimiya00.github.io/kimiya-razdar-portfolio)**
 
 ## File Structure
 
@@ -152,8 +154,7 @@ Tested and working in Chrome 60+, Firefox 55+, Safari 12+, and modern mobile bro
 ## Contact
 
 **Kimiya Razdar**  
-Razdarkim@gmail.com  
-(469) 471-6932  
+Razdarkim@gmail.com    
 [GitHub](https://github.com/Kimiya00)  
 
 *Seeking opportunities in IT Support, AI Operations, AI Product Management, and Data Analysis*
