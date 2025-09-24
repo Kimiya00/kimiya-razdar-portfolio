@@ -155,7 +155,6 @@ Tested and working in Chrome 60+, Firefox 55+, Safari 12+, and modern mobile bro
 Razdarkim@gmail.com  
 (469) 471-6932  
 [GitHub](https://github.com/Kimiya00)  
-Frisco, TX
 
 *Seeking opportunities in IT Support, AI Operations, AI Product Management, and Data Analysis*
 

@@ -21,6 +21,7 @@ body {
     color: #334155;
     line-height: 1.7;
     min-height: 100vh;
+    padding-top: 5rem;
 }
 
 .container {
@@ -92,6 +93,10 @@ body {
     margin: 0 auto;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .profile-image {
@@ -737,6 +742,7 @@ body {
 
 @media (max-width: 768px) {
     .nav-container {
+        padding-top: 6rem;
         gap: 1rem;
         flex-wrap: wrap;
         justify-content: center;
