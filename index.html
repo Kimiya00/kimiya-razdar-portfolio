@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#667eea"> 
     <title>Kimiya Razdar - Tech Professional & Developer</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -24,7 +25,7 @@
         <div class="hero-container">
             <div class="hero-content">
                 <div class="profile-image">
-                    <img src="assets/images/profile-placeholder.jpg" alt="Kimiya Razdar" class="profile-img">
+                    <img src="assets/images/profile-placeholder.jpg" alt="Kimiya Razdar - Tech Professional" class="profile-img" loading="lazy">
                 </div>
                 <h1 class="hero-title">Kimiya Razdar</h1>
                 <div class="hero-subtitle">
@@ -214,7 +215,6 @@
                     <div class="skill-items">
                         <div class="skill-item">
                             <span class="skill-name">Hardware/Software Troubleshooting</span>
-                            </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="95"></div>
                             </div>
@@ -271,7 +271,7 @@
                 <!-- Enhanced Calculator -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/calculator-project.jpg" alt="Enhanced Calculator" class="project-img">
+                       <img src="assets/images/calculator-project.jpg" alt="Enhanced Calculator Project Screenshot" class="project-img" loading="lazy">
                         <div class="project-status">Live Demo</div>
                         <div class="project-overlay">
                             <div class="project-links">
@@ -298,7 +298,7 @@
                 <!-- Unit Converter Project -->
 <div class="project-card">
     <div class="project-image">
-        <img src="assets/images/unit-converter-project.jpg" alt="Unit Converter" class="project-img">
+        <img src="assets/images/unit-converter-project.jpg" alt="Unit Converter Project Screenshot" class="project-img" loading="lazy">
         <div class="project-status">Live Demo</div>
         <div class="project-overlay">
             <div class="project-links">
@@ -325,7 +325,7 @@
                 <!-- Smart Todo List App -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/todo-project.jpg" alt="Smart Todo List" class="project-img">
+                        <img src="assets/images/todo-project.jpg" alt="Smart Todo List Project Screenshot" class="project-img" loading="lazy">
                         <div class="project-status">Live Demo</div>
                         <div class="project-overlay">
                             <div class="project-links">
@@ -430,24 +430,30 @@
     <!-- Skill Bar Animation Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const skillProgress = document.querySelectorAll('.skill-progress');
-            skillProgress.forEach(skill => {
-                const width = skill.getAttribute('data-width');
-                skill.style.width = width + '%';
-            });
+            const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px 0px -100px 0px'
+    };
+    
+    const skillObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const skillBars = entry.target.querySelectorAll('.skill-progress');
+                skillBars.forEach(bar => {
+                    const width = bar.getAttribute('data-width');
+                    bar.style.width = width + '%';
+                });
+            }
         });
-    </script>
+    }, observerOptions);
+    
+    const skillsSection = document.querySelector('.skills-section');
+    if (skillsSection) {
+        skillObserver.observe(skillsSection);
+    }
+});
+</script>
 
-    <!-- Skill Bar Animation Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const skillProgress = document.querySelectorAll('.skill-progress');
-            skillProgress.forEach(skill => {
-                const width = skill.getAttribute('data-width');
-                skill.style.width = width + '%';
-            });
-        });
-    </script>
 
     <script src="js/script.js"></script>
 </body>
