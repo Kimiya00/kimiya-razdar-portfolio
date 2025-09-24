@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unit Converter</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="converter-container">
+    <h1>Unit Converter</h1>
+
+    <div class="input-group">
+      <label for="inputValue">Value:</label>
+      <input type="number" id="inputValue" value="0" step="any" aria-label="Value to convert">
+    </div>
+
+    <div class="select-group">
+      <label for="unitCategory">Category:</label>
+      <select id="unitCategory" aria-label="Unit category">
+        <option value="temperature">Temperature</option>
+        <option value="length">Length</option>
+        <option value="mass">Mass</option>
+      </select>
+    </div>
+
+    <div class="select-row">
+      <div class="select-group">
+        <label for="fromUnit">From:</label>
+        <select id="fromUnit" aria-label="Convert from unit"></select>
+      </div>
+      <div class="select-group">
+        <label for="toUnit">To:</label>
+        <select id="toUnit" aria-label="Convert to unit"></select>
+      </div>
+    </div>
+
+    <div class="result-display" id="resultDisplay">0</div>
+    <small id="conversionNote" class="text-gray-500 text-center block"></small>
+
+    <button class="reset-button" id="resetButton">Reset</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
