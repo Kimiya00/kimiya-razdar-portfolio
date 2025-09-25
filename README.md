@@ -29,21 +29,21 @@ No build process, no dependencies. Clean, organized code structure ready for dep
 
 **[Live Portfolio →](https://vercel.com/kimiyas-projects-063192c8/real-estate-ai-app)**
 
-**[GitHub Repository](https://kimiya00.github.io/kimiya-razdar-portfolio)**
+**[GitHub Repository](https://github.com/Kimiya00/kimiya-razdar-portfolio)**
 
 ## File Structure
 
 ```
 portfolio/
-├── index.html          # Main HTML structure
+├── index.html          
 ├── css/
-│   └── style.css      # All styling and animations
+│   └── style.css      
 ├── js/
-│   └── script.js      # Interactive functionality
+│   └── script.js      
 ├── assets/
-│   └── images/        # Project images and profile photo
-├── README.md          # This documentation
-└── projects/          # Individual project showcases
+│   └── images/         
+├── README.md          
+└── projects/          
     ├── calculator/
     │   ├── index.html
     │   └── README.md
