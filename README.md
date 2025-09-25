@@ -27,9 +27,9 @@ open index.html
 
 No build process, no dependencies. Clean, organized code structure ready for deployment.
 
-**[Live Portfolio →](https://vercel.com/kimiyas-projects-063192c8/real-estate-ai-app)**
+**[Live Portfolio →](https://kimiya-razdar-portfolio.vercel.app/)**
 
-**[GitHub Repository](https://github.com/Kimiya00/kimiya-razdar-portfolio)**
+**[GitHub Repository →](https://github.com/Kimiya00/kimiya-razdar-portfolio)**
 
 ## File Structure
 
