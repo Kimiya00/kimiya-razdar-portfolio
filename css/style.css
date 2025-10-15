@@ -94,7 +94,7 @@ body {
 }
 
 .backdrop-blur {
-    background: rgba(255, 255, 255, 0.95) !important;
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 1.5rem;
@@ -297,8 +297,10 @@ button:focus-visible,
     margin-bottom: 3rem;
     position: relative;
     padding-bottom: 1rem;
-    color: #1e293b;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; 
 }
 
 .section-heading::after {
@@ -320,6 +322,8 @@ button:focus-visible,
     border-radius: 1.5rem;
     padding: 3rem 2rem;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* ==========================================================================
@@ -331,13 +335,6 @@ button:focus-visible,
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: start;
-}
-
-.backdrop-blur {
-    background: rgba(255, 255, 255, 0.95) !important;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 1.5rem;
 }
 
 .about-title,
@@ -417,34 +414,18 @@ button:focus-visible,
    SKILLS SECTION
    ========================================================================== */
 
-.skills-section {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-}
-
-.backdrop-blur {
-    background: rgba(255, 255, 255, 0.95) !important;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 1.5rem;
-}
-
-.skills-section .section-heading {
-    color: #1e293b;
-}
-
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-    margin-bottom: 3rem;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .skill-category {
     background: rgba(102, 126, 234, 0.05);
     border: 1px solid rgba(102, 126, 234, 0.1);
     border-radius: 1rem;
-    padding: 1.5rem;
+    padding: 1.25rem;
 }
 
 .skill-category-title {
@@ -533,17 +514,21 @@ button:focus-visible,
 
 .cert-item {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     background: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(102, 126, 234, 0.2);
     border-radius: 0.5rem;
     padding: 1rem;
+    height: 100%;
+    text-align: center;
 }
 
 .cert-name {
     font-weight: 500;
     color: #1e293b;
+    flex: 1;
 }
 
 .cert-status {
@@ -581,13 +566,6 @@ button:focus-visible,
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
-}
-
-.backdrop-blur {
-    background: rgba(255, 255, 255, 0.95) !important;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 1.5rem;
 }
 
 .project-card {
@@ -723,19 +701,6 @@ button:focus-visible,
    CONTACT SECTION
    ========================================================================== */
 
-.contact-section {
-    color: #e2e8f0;
-}
-
-.contact-section .section-heading,
-.contact-section .contact-title {
-    color: #FFFFFF;
-}
-
-.contact-section .contact-description {
-    color: #cbd5e1;
-}
-
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -743,21 +708,9 @@ button:focus-visible,
     align-items: start;
 }
 
-.backdrop-blur {
-    background: rgba(255, 255, 255, 0.95) !important;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 1.5rem;
-}
-
 .contact-info,
 .contact-form {
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    padding: 2rem;
-    box-shadow: none;
-    color: #ffffff;
+    padding: 0;
 }
 
 .contact-title {
@@ -795,7 +748,7 @@ button:focus-visible,
 .contact-link {
     color: #667eea;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     transition: color 0.3s ease;
 }
 
@@ -915,10 +868,6 @@ button:focus-visible,
         gap: 2rem;
     }
     
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-    
     .projects-grid {
         grid-template-columns: 1fr;
     }
@@ -936,9 +885,23 @@ button:focus-visible,
         padding: 0 1rem;
     }
     
+     .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
     .skills-section .container {
         padding: 2rem 1.5rem;
     }
+    
+    .section-box {
+        padding: 2rem 1.5rem;
+        margin: 0 1rem;
+    }
+    
+    .cert-column {
+        margin-bottom: 1.5rem;
+    }
+
 }
 
 @media (max-width: 480px) {

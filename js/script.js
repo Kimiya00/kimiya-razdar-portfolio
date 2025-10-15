@@ -134,16 +134,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (entry.target.classList.contains('skills-section')) {
                     animateSkills();
                 }
-                
-                 if (entry.target.classList.contains('about-section')) {
-                animateStats();
-            }
+                if (entry.target.classList.contains('about-section')) {
+                    animateStats();
+                }
 
-                // Add fade-in animation with delay for projects   
-                setTimeout(() => {
+                // Add fade-in animation  
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
-            }, 100);
         
             // Unobserve after animation
             observer.unobserve(entry.target);
@@ -158,7 +155,8 @@ document.addEventListener('DOMContentLoaded', function() {
         section.style.opacity = '0';
         section.style.transform = 'translateY(30px)';
         section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        
+        section.style.minHeight = '100px';
+
         observer.observe(section);
     });
     
