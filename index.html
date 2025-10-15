@@ -5,15 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#667eea"> 
     <link rel="icon" href="assets/images/favicon.ico">
+    <link rel="preload" href="assets/images/kimiya-photo.jpg" as="image">
+    <link rel="canonical" href="https://kimiya-razdar-portfolio.vercel.app/">
     <meta name="description" content="Kimiya Razdar - IT Professional & Web Developer specializing in AI automation, JavaScript applications, data analysis, and digital solutions. 4+ years IT support experience with ChatGPT prompt engineering expertise.">
     <meta property="og:title" content="Kimiya Razdar - Portfolio">
     <title>Kimiya Razdar - Tech Professional & Developer</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kimiya Razdar",
+        "jobTitle": "AI Operations Specialist & IT Professional",
+        "url": "https://kimiya-razdar-portfolio.vercel.app/",  
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://kimiya-razdar-portfolio.vercel.app/assets/images/kimiya-photo.jpg"  
+        },
+        "email": "razdarkim@gmail.com",
+        "telephone": "+1-469-471-6932",
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Texas at Dallas",
+            "sameAs": "https://www.utdallas.edu/"
+        },
+        "knowsAbout": ["JavaScript", "ChatGPT Prompt Engineering", "Data Analysis", "AI Automation", "IT Support"],
+        "sameAs": [
+            "https://github.com/Kimiya00",
+            "https://www.linkedin.com/in/kimiyarazdar/"
+        ]
+    }
+    </script>
 </head>
 <body>
     <!-- Floating Navigation -->
-    <nav class="nav-floating">
+    <nav class="nav-floating" aria-label="Main navigation">
         <div class="nav-container">
             <a href="#home" class="nav-link">Home</a>
             <a href="#about" class="nav-link">About</a>
@@ -25,19 +51,24 @@
 
     <!-- Hero Section -->
     <header id="home" class="hero-section">
-        <div class="hero-container">
+        <div class="hero-container backdrop-blur">
             <div class="hero-content">
                 <div class="profile-image">
-                    <img src="assets/images/profile-placeholder.jpg" alt="Kimiya Razdar - Tech Professional" class="profile-img" loading="lazy">
+                    <picture>
+                        <source srcset="assets/images/kimiya-photo.webp" type="image/webp">
+                        <img src="assets/images/kimiya-photo.jpg" alt="Kimiya Razdar - Tech Professional" class="profile-img" loading="lazy">
+                            <svg class="quirk-svg" viewBox="0 0 100 100">
+                                <path d="M10 90 Q50 10 90 90" stroke="#f0932b" stroke-width="2" fill="none"/>
+                            </svg>
+                    </picture>
                 </div>
                 <h1 class="hero-title">Kimiya Razdar</h1>
                 <div class="hero-subtitle">
-                    <span id="typing-text">Tech Professional & Aspiring Developer</span>
+                    <span id="typing-text">AI Operations & IT Specialist</span>
                 </div>
                 <p class="hero-description">
-                    Neuroscience graduate with 4+ years of IT support and digital strategy experience. 
-                    Building innovative web solutions using modern deployment platforms like Vercel while leveraging AI tools and data-driven approaches.
-                    <span class="learning-badge">Currently Expanding Skills!</span>
+                    AI operations specialist and IT professional with over 4 years of hands-on experience deploying AI workflows, managing technical infrastructure, and building applications that solve real problems.
+                    <span class="learning-badge">Open to AI Ops & IT Roles!</span>
                 </p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn-primary">View My Work</a>
@@ -45,16 +76,16 @@
                 </div>
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <span class="stat-number">4+</span>
-                        <span class="stat-label">Years IT Experience</span>
+                        <span class="stat-number" data-original="100+">100+</span>
+                        <span class="stat-label">AI Prompts Deployed</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">30%</span>
-                        <span class="stat-label">Client Growth Achieved</span>
+                        <span class="stat-number" data-original="4+">4+</span>
+                        <span class="stat-label">Years IT & AI Operations</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">99%</span>
-                        <span class="stat-label">System Uptime</span>
+                        <span class="stat-number" data-original="25%">25%</span>
+                        <span class="stat-label">Process Time Reduction</span>
                     </div>
                 </div>
             </div>
@@ -63,35 +94,46 @@
 
     <!-- About Section -->
     <section id="about" class="about-section">
-        <div class="container">
+        <div class="container backdrop-blur">
             <h2 class="section-heading">About Me</h2>
             <div class="about-grid">
-                <div class="about-text">
-                    <h3 class="about-title">From Neuroscience to Tech Innovation</h3>
+                <div class="about-text backdrop-blur">
+                    <h3 class="about-title">AI Operations Meets IT Infrastructure</h3>
                     <p class="about-description">
-                        With a background in Neuroscience (BS, UT Dallas, Cum Laude) and 4+ years of IT and digital solutions experience, I bring a unique perspective to problem-solving and user experience. My focus has consistently been on building technology that drives measurable results.
+                        Background in Neuroscience (BS, UT Dallas, Cum Laude) with 4+ years building AI workflows and managing IT infrastructure. My thesis work in statistical analysis taught me how to find patterns in data, which translates directly to how I engineer AI prompts today. I've built 100+ production prompts that reduced process time by 25% while maintaining 99% system uptime.
                     </p>
                     <p class="about-description">
-                        Now, I’m building my development expertise with modern deployment platforms and leveraging my experience in AI tools, data analysis, and digital strategy to create solutions with real business and user impact.
+                         I create analytics dashboards, automate workflows, optimize campaigns (25% reach boost), and resolve 100+ support tickets monthly. I understand both how to design AI solutions and how to deploy them without breaking production systems.
+                    </p>
                     </p>
                 </div>
-                <div class="about-timeline">
+                <div class="about-timeline backdrop-blur">
                     <h3 class="timeline-title">Professional Journey</h3>
                     <div class="timeline">
                         <div class="timeline-item">
                             <div class="timeline-marker"></div>
                             <div class="timeline-content">
-                                <h4>IT & Digital Solutions Specialist</h4>
+                                <h4>AI Operations & Automation Specialist</h4>
                                 <span class="timeline-period">2020 - Present</span>
-                                <p>Managed 100+ issues monthly, increased digital engagement by 20%</p>
+                                <p>
+                                    Built 100+ production AI prompts (25% efficiency gain).<br>
+                                    Created analytics dashboards for KPI tracking.<br>
+                                    Expanded SEO reach by 25%.<br>
+                                    Automated client workflows.
+                                </p>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-marker"></div>
                             <div class="timeline-content">
-                                <h4>Web Developer & Digital Strategist</h4>
+                                <h4>IT Support & Digital Solutions Specialist</h4>
                                 <span class="timeline-period">2020 - Present</span>
-                                <p>Built responsive websites, generated 30% increase in client inquiries</p>
+                                <p>
+                                    Resolved 100+ issues monthly (99% uptime).<br>
+                                    Built knowledge base and SOPs (18% faster resolution).<br>
+                                    Managed technical onboarding and web infrastructure.<br>
+                                    Drove 30% increase in client inquiries.
+                                </p>
                             </div>
                         </div>
                         <div class="timeline-item">
@@ -110,7 +152,7 @@
 
     <!-- Skills Section -->
     <section id="skills" class="skills-section">
-        <div class="container">
+        <div class="container backdrop-blur">
             <h2 class="section-heading">Technical Skills</h2>
             <div class="skills-grid">
                 <!-- Programming & Development -->
@@ -120,28 +162,28 @@
                         <div class="skill-item">
                             <span class="skill-name">HTML/CSS</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="85"></div>
+                                <div class="skill-progress" data-width="83"></div>
                             </div>
                             <span class="skill-level">Advanced</span>
                         </div>
                         <div class="skill-item">
                             <span class="skill-name">JavaScript</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="70"></div>
+                                <div class="skill-progress" data-width="72"></div>
                             </div>
                             <span class="skill-level">Intermediate</span>
                         </div>
                         <div class="skill-item">
                             <span class="skill-name">Python</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="65"></div>
+                                <div class="skill-progress" data-width="64"></div>
                             </div>
                             <span class="skill-level">Intermediate</span>
                         </div>
                         <div class="skill-item">
                             <span class="skill-name">Git/GitHub</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="80"></div>
+                                <div class="skill-progress" data-width="78"></div>
                             </div>
                             <span class="skill-level">Advanced</span>
                         </div>
@@ -149,7 +191,7 @@
                         <div class="skill-item">
                             <span class="skill-name">Vercel Deployment</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="75"></div>
+                                <div class="skill-progress" data-width="69"></div>
                             </div>
                             <span class="skill-level">Intermediate</span>
                         </div>
@@ -163,7 +205,7 @@
                         <div class="skill-item">
                             <span class="skill-name">ChatGPT Prompt Engineering</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="95"></div>
+                                <div class="skill-progress" data-width="92"></div>
                             </div>
                             <span class="skill-level">Expert</span>
                         </div>
@@ -177,7 +219,7 @@
                         <div class="skill-item">
                             <span class="skill-name">Workflow Optimization</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="80"></div>
+                                <div class="skill-progress" data-width="81"></div>
                             </div>
                             <span class="skill-level">Advanced</span>
                         </div>
@@ -191,21 +233,21 @@
                         <div class="skill-item">
                             <span class="skill-name">Excel & Data Visualization</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="95"></div>
+                                <div class="skill-progress" data-width="94"></div>
                             </div>
-                            <span class="skill-level">Advanced</span>
+                            <span class="skill-level">Expert</span>
                         </div>
                         <div class="skill-item">
                             <span class="skill-name">Statistical Analysis</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="75"></div>
+                                <div class="skill-progress" data-width="78"></div>
                             </div>
-                            <span class="skill-level">Intermediate+</span>
+                            <span class="skill-level">Advanced</span>
                         </div>
                         <div class="skill-item">
                             <span class="skill-name">Research Methodology</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="90"></div>
+                                <div class="skill-progress" data-width="92"></div>
                             </div>
                             <span class="skill-level">Expert</span>
                         </div>
@@ -219,16 +261,16 @@
                         <div class="skill-item">
                             <span class="skill-name">Hardware/Software Troubleshooting</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="95"></div>
+                                <div class="skill-progress" data-width="93"></div>
                             </div>
                             <span class="skill-level">Expert</span>
                         </div>
                         <div class="skill-item">
                             <span class="skill-name">System Maintenance</span>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="90"></div>
+                                <div class="skill-progress" data-width="87"></div>
                             </div>
-                            <span class="skill-level">Expert</span>
+                            <span class="skill-level">Advanced</span>
                         </div>
                         <div class="skill-item">
                             <span class="skill-name">Digital Campaign Management</span>
@@ -247,27 +289,27 @@
                 <div class="certifications-grid">
                     <div class="cert-item">
                         <span class="cert-name">ChatGPT Prompt Engineering for Developers</span>
-                        <span class="cert-status">Completed</span>
+                        <span class="cert-status completed">Completed</span>
                     </div>
                     <div class="cert-item">
                         <span class="cert-name">Google Prompting Essentials Certificate</span>
-                        <span class="cert-status">Completed</span>
+                        <span class="cert-status completed">Completed</span>
                     </div>
                     <div class="cert-item">
                         <span class="cert-name">Microsoft Azure AI Fundamentals Certificate</span>
-                        <span class="cert-status">Near Completion</span>
+                        <span class="cert-status near-completion">Near Completion</span>
                     </div>
                     <div class="cert-item">
                         <span class="cert-name">Google IT Support Specialist</span>
-                        <span class="cert-status">Near Completion</span>
+                        <span class="cert-status near-completion">Near Completion</span>
                     </div>
                     <div class="cert-item">
                         <span class="cert-name">HarvardX CS50</span>
-                        <span class="cert-status">In Progress</span>
+                        <span class="cert-status in-progress">In Progress</span>
                     </div>
                     <div class="cert-item">
                         <span class="cert-name">FreeCodeCamp Web Development</span>
-                        <span class="cert-status">In Progress</span>
+                        <span class="cert-status in-progress">In Progress</span>
                     </div>
                 </div>
             </div>
@@ -276,11 +318,11 @@
 
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
-        <div class="container">
+        <div class="container backdrop-blur">
             <h2 class="section-heading">Featured Projects</h2>
             <div class="projects-grid">
                 <!-- Enhanced Calculator -->
-                <div class="project-card">
+                <div class="project-card backdrop-blur">
                     <div class="project-image">
                        <img src="assets/images/calculator-project.jpg" alt="Enhanced Calculator Project Screenshot" class="project-img" loading="lazy">
                         <div class="project-status">Live Demo</div>
@@ -294,8 +336,7 @@
                     <div class="project-content">
                         <h3 class="project-title">Enhanced Calculator</h3>
                         <p class="project-description">
-                            Modern calculator with glassmorphism design, calculation history, and full keyboard support. 
-                            Features advanced error handling and responsive design principles.
+                            Calculator app with history tracking and keyboard shortcuts. Built this to practice event-driven programming and state management, which I now use when building AI workflow interfaces.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">JavaScript</span>
@@ -303,11 +344,14 @@
                             <span class="tech-tag">HTML5</span>
                             <span class="tech-tag">Responsive</span>
                         </div>
+                        <div class="project-lessons">
+                            <p><strong>Technical Challenge:</strong> Keyboard shortcuts conflicted with browser defaults. Solved with event delegation and input debouncing, same pattern I use for managing rapid AI API calls without overwhelming rate limits.</p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Unit Converter Project -->
-<div class="project-card">
+<div class="project-card backdrop-blur">
     <div class="project-image">
         <img src="assets/images/unit-converter-project.jpg" alt="Unit Converter Project Screenshot" class="project-img" loading="lazy">
         <div class="project-status">Live Demo</div>
@@ -319,10 +363,9 @@
         </div>
     </div>
     <div class="project-content">
-        <h3 class="project-title">Smart Unit Converter</h3>
+        <h3 class="project-title">Multi-Category Unit Converter</h3>
         <p class="project-description">
-            Multi-category unit converter supporting length, weight, temperature, and volume conversions. 
-            Features real-time conversion, input validation, and clean interface design.
+            Multi-category unit converter with real-time calculations. Taught me data validation and error handling, which prevents failures when deploying AI tools in production.
         </p>
         <div class="project-tech">
             <span class="tech-tag">JavaScript</span>
@@ -330,26 +373,28 @@
             <span class="tech-tag">HTML5</span>
             <span class="tech-tag">Responsive</span>
         </div>
+        <div class="project-lessons">
+            <p><strong>Technical Challenge:</strong> Floating-point precision errors produced incorrect conversions. Implemented rounding strategies and boundary testing—same approach I use when validating AI output for accuracy before deployment.</p>
+        </div>
     </div>
 </div>
 
                 <!-- Smart Todo List App -->
-                <div class="project-card">
+                <div class="project-card backdrop-blur">
                     <div class="project-image">
                         <img src="assets/images/todo-project.jpg" alt="Smart Todo List Project Screenshot" class="project-img" loading="lazy">
                         <div class="project-status">Live Demo</div>
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="https://kimiya00.github.io/smart-todo-app/" class="project-link"target="_blank">Live Demo</a>
+                                <a href="https://kimiya00.github.io/smart-todo-app/" class="project-link" target="_blank">Live Demo</a>
                                <a href="https://github.com/Kimiya00/smart-todo-app" class="project-link" target="_blank">View Code</a>
                             </div>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Smart Todo List</h3>
+                        <h3 class="project-title">Task Management App with Analytics</h3>
                         <p class="project-description">
-                            Feature-rich task manager with priority levels, filtering, local storage, and productivity statistics. 
-                            Demonstrates advanced JavaScript concepts and user experience design.
+                           Task manager with filtering, local storage, and analytics dashboard. Taught me data persistence patterns I now use for tracking AI workflow performance.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">JavaScript</span>
@@ -357,12 +402,15 @@
                             <span class="tech-tag">CSS Grid</span>
                             <span class="tech-tag">UX Design</span>
                         </div>
+                        <div class="project-lessons">
+                           <p><strong>Technical Challenge:</strong> localStorage size limits failed for power users with 500+ tasks. Migrated to IndexedDB for scalable storage, taught me to plan for scale from the start, which I apply when designing AI prompt libraries for production environments.</p>
+                        </div>
                     </div>
                 </div>
                                 <!-- IT Ticket Classifier -->
-                <div class="project-card">
+                <div class="project-card backdrop-blur">
                     <div class="project-image">
-                        <img src="assets/images/ticket-classifier-project.jpg" alt="IT Ticket Classifier Project Screenshot" class="project-img" loading="lazy">
+                        <img src="assets/images/ticket-classifier-project.png" alt="IT Ticket Classifier Project Screenshot" class="project-img" loading="lazy">
                         <div class="project-status" style="background: rgba(249, 115, 22, 0.9);">In Progress</div>
                         <div class="project-overlay">
                             <div class="project-links">
@@ -371,10 +419,11 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">IT Ticket Classifier</h3>
+                        <h3 class="project-title">ML-Based Ticket Classification System</h3>
                         <p class="project-description">
-                            Machine learning application that automatically classifies IT support tickets using natural language processing. 
-                            Streamlines ticket triage by predicting categories based on historical data patterns.
+                            Machine learning model that auto-categorizes IT support tickets using NLP and historical data patterns. 
+            Reduces manual triage time by predicting ticket priority and routing. Built with scikit-learn on 
+            real ticket data from my IT support experience—solving an actual operational bottleneck.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
@@ -382,13 +431,16 @@
                             <span class="tech-tag">NLP</span>
                             <span class="tech-tag">pandas</span>
                         </div>
+                        <div class="project-lessons">
+                            <p><strong>Technical Challenge:</strong> Training data was heavily imbalanced (80% password resets, 5% network issues). Implemented SMOTE resampling and weighted classes to improve minority category accuracy. Learning: Real-world data is 80% of ML work.</p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- n8n AI Agent -->
-                <div class="project-card">
+                <div class="project-card backdrop-blur">
                     <div class="project-image">
-                        <img src="assets/images/n8n-automation-project.jpg" alt="n8n AI Automation Project Screenshot" class="project-img" loading="lazy">
+                        <img src="assets/images/n8n-automation-project.png" alt="n8n AI Automation Project Screenshot" class="project-img" loading="lazy">
                         <div class="project-status" style="background: rgba(249, 115, 22, 0.9);">In Progress</div>
                         <div class="project-overlay">
                             <div class="project-links">
@@ -397,16 +449,20 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">AI Job Application Automation</h3>
+                        <h3 class="project-title">AI-Powered Job Application Workflow</h3>
                         <p class="project-description">
-                            Intelligent workflow automation using n8n and OpenAI to streamline job applications. 
-                            Features resume parsing, job matching, and AI-generated tailored cover letters to reduce repetitive tasks.
+                            End-to-end automation system using n8n and OpenAI API to parse job postings, match requirements 
+            to resume, and generate tailored cover letters. Demonstrates prompt engineering, API integration, 
+            and workflow AI operations skills. Reduces application time from 30 minutes to 5 minutes per role.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">n8n</span>
                             <span class="tech-tag">OpenAI API</span>
                             <span class="tech-tag">JavaScript</span>
                             <span class="tech-tag">Automation</span>
+                        </div>
+                        <div class="project-lessons">
+                            <p><strong>Technical Challenge:</strong> OpenAI API rate limits caused workflow failures during bulk processing. Implemented exponential backoff retry logic and request queuing. Learning: Production AI workflows need robust error handling APIs fail, and you have to plan for it.</p>
                         </div>
                     </div>
                 </div>  
@@ -416,15 +472,13 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
-        <div class="container">
+        <div class="container backdrop-blur">
             <h2 class="section-heading">Let's Connect</h2>
             <div class="contact-grid">
-                <div class="contact-info">
-                    <h3 class="contact-title">Ready to collaborate?</h3>
+                <div class="contact-info backdrop-blur">
+                    <h3 class="contact-title">Let's Build Smarter Systems</h3>
                     <p class="contact-description">
-                        I'm actively seeking opportunities in IT Support, AI Operations, AI Product Management, 
-                        and Data Analysis roles. With my technical background and proven track record of 
-                        delivering results, I'm ready to contribute to innovative projects.
+                        I'm looking for roles in <strong>AI Operations, Prompt Engineering, IT Support, or AI Product Management</strong>. I bring 4+ years of IT experience and proven AI implementation skills (100+ production prompts, 25% efficiency gains, 99% uptime). I build AI workflows and manage technical infrastructure that actually works in production.
                     </p>
                     <div class="contact-details">
                         <div class="contact-item">
@@ -460,7 +514,7 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" id="contact-form">
+                <form class="contact-form backdrop-blur" id="contact-form">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Your Name" required class="form-input">
                     </div>
@@ -481,41 +535,13 @@
 
     <!-- Footer -->
     <footer class="footer-section">
-        <div class="container">
+        <div class="container backdrop-blur">
             <div class="footer-content">
-                <p class="footer-text">&copy; 2025 Kimiya Razdar. Built with passion and continuous learning.</p>
+                <p class="footer-text">&copy; <span id="current-year"></span> Kimiya Razdar. Built with passion and continuous learning.</p>
                 <p class="footer-tagline">Transforming challenges into solutions, one line of code at a time.</p>
             </div>
         </div>
     </footer>
-
-    <!-- Skill Bar Animation Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const observerOptions = {
-        threshold: 0.5,
-        rootMargin: '0px 0px -100px 0px'
-    };
-    
-    const skillObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const skillBars = entry.target.querySelectorAll('.skill-progress');
-                skillBars.forEach(bar => {
-                    const width = bar.getAttribute('data-width');
-                    bar.style.width = width + '%';
-                });
-            }
-        });
-    }, observerOptions);
-    
-    const skillsSection = document.querySelector('.skills-section');
-    if (skillsSection) {
-        skillObserver.observe(skillsSection);
-    }
-});
-</script>
-
 
     <script src="js/script.js"></script>
 </body>

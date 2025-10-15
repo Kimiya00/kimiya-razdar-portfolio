@@ -1,5 +1,6 @@
-// Portfolio JavaScript - Kimiya Razdar
-// Interactive features and animations
+    // Kimiya's Portfolio JavaScript
+    // Built with vanilla JS because I like understanding how things actually work
+    // If you're reading this during an interview: Hi! Let's talk about these implementation choices.
 
 document.addEventListener('DOMContentLoaded', function() {
     
@@ -8,11 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==========================================================================
     
     const typingTexts = [
-        'Tech Professional & Developer',
-        'Problem Solver & Innovator',
+        'AI Operations & IT Specialist',
+        'Prompt Engineering Expert',
+        'Problem Solver & Automator',
         'AI Tools Specialist',
-        'Data-Driven Thinker',
-        'Continuous Learner'
+        'Data-Driven Decision Maker',
+        'Continuous Learner',
+        'Neuroscience Graduate Turned Tech Pro'
     ];
     
     let textIndex = 0;
@@ -90,6 +93,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Animate hero stats counter
+    function animateStats() {
+    const stats = document.querySelectorAll('.stat-number');
+    
+    stats.forEach(stat => {
+        const original = stat.getAttribute('data-original');
+        const target = parseInt(original);
+        
+        if (isNaN(target)) return;
+        
+        const suffix = original.replace(/[0-9]/g, '');
+        let count = 0;
+        const increment = target / 50;
+        
+        const timer = setInterval(() => {
+            count += increment;
+            if (count >= target) {
+                stat.textContent = target + suffix;
+                clearInterval(timer);
+            } else {
+                stat.textContent = Math.floor(count) + suffix;
+            }
+        }, 30);
+    });
+}
+
     // ==========================================================================
     // INTERSECTION OBSERVER FOR ANIMATIONS
     // ==========================================================================
@@ -106,7 +135,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     animateSkills();
                 }
                 
-                // Add fade-in animation
+                 if (entry.target.classList.contains('about-section')) {
+                animateStats();
+            }
+
+                // Add fade-in animation    
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
             }
@@ -182,14 +215,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Simulate form submission (replace with actual form handling)
-            showNotification('Thank you for your message! I\'ll get back to you soon.', 'success');
-            
+            // Simulate form submission
+            showNotification('Message received! I\'ll respond faster than my code compiles.', 'success');
+
             // Reset form
             this.reset();
-            
-            // In a real implementation, you would send the data to a server
-            // Example: submitFormData(formData);
+
+            // TODO: Integrate EmailJS when ready
+            console.log('Form submitted:', {
+                name: name,
+                email: email,
+                subject: subject
+        });
         });
     }
     
@@ -325,6 +362,18 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Log successful initialization
     console.log('Portfolio JavaScript initialized successfully');
+
+    // Console Easter Eggs
+    console.log('%c👋 Hey there, code inspector!', 
+        'font-size: 20px; font-weight: bold; color: #667eea;');
+    console.log('%c🔍 Checking out the code? I wrote this while learning JavaScript, debugging errors, and drinking way too much coffee.', 
+        'font-size: 14px; color: #64748b;');
+    console.log('%c💼 Looking for someone who reads documentation AND actually implements it? Let\'s talk: razdarkim@gmail.com', 
+        'font-size: 14px; color: #10b981; font-weight: bold;');
+    console.log('%c🤖 Fun fact: I engineered 100+ AI prompts in production. Want to see what I can do with yours?', 
+        'font-size: 12px; font-style: italic; color: #f59e0b;');
+    console.log('%cP.S. - All animations are vanilla JS. No frameworks, no libraries, just problem-solving.', 
+        'font-size: 11px; color: #94a3b8;');
 });
 
 // ==========================================================================
@@ -381,3 +430,5 @@ function smoothScrollTo(element) {
 function easeInOutCubic(t) {
     return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
 }
+
+document.getElementById('current-year').textContent = new Date().getFullYear();
