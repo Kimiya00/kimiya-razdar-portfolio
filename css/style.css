@@ -37,7 +37,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 2rem;
 }
 
 /* ==========================================================================
@@ -94,17 +94,12 @@ body {
 }
 
 .backdrop-blur {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.95) !important;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1.5rem;
 }
 
-@supports not (backdrop-filter: blur(10px)) {
-    .backdrop-blur {
-        background: rgba(255, 255, 255, 0.8); 
-        backdrop-filter: none;
-    }
-}
 .hero-container {
     border-radius: 2.5rem;
     padding: 3rem 2rem;
@@ -329,17 +324,12 @@ button:focus-visible,
 }
 
 .backdrop-blur {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.95) !important;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1.5rem;
 }
 
-@supports not (backdrop-filter: blur(10px)) {
-    .backdrop-blur {
-        background: rgba(255, 255, 255, 0.8); 
-        backdrop-filter: none;
-    }
-}
 .about-text,
 .about-timeline {
     border-radius: 1.5rem;
@@ -430,17 +420,12 @@ button:focus-visible,
 }
 
 .backdrop-blur {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.95) !important;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1.5rem;
 }
 
-@supports not (backdrop-filter: blur(10px)) {
-    .backdrop-blur {
-        background: rgba(255, 255, 255, 0.8); 
-        backdrop-filter: none;
-    }
-}
 .skills-section .container {
     border-radius: 2rem;
     padding: 3rem 2rem;
@@ -458,15 +443,11 @@ button:focus-visible,
     margin-bottom: 3rem;
 }
 
-.skills-grid .skill-category:nth-child(odd) {
-    margin-left: var(--quirk-offset);
-}
-
 .skill-category {
     background: rgba(102, 126, 234, 0.05);
     border: 1px solid rgba(102, 126, 234, 0.1);
     border-radius: 1rem;
-    padding: 2rem 1.5rem;
+    padding: 1.5rem;
 }
 
 .skill-category-title {
@@ -484,55 +465,39 @@ button:focus-visible,
 }
 
 .skill-item {
-    display: flex;
+    display: grid;
+    grid-template-columns: 140px 1fr 95px;
     align-items: center;
-    justify-content: space-between;
-    gap: 1rem;  
-    min-height: auto;
-    margin-bottom: 0;
-    padding: 0.25rem 0; 
+    gap: 1rem;
+    padding: 0.75rem 0;
 }
 
 .skill-name {
     font-weight: 500;
     color: #1e293b;
-    min-width: 140px;  
-    max-width: 180px;  
-    font-size: 0.95rem;  
-    line-height: 1.3;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    flex-shrink: 0;
+    font-size: 0.9rem;
 }
 
 .skill-bar {
-    flex: 1;
-    min-width: 200px;
-    height: 30px;
+    height: 8px;
     background: rgba(102, 126, 234, 0.2);
-    border-radius: 15px;
+    border-radius: 4px;
     overflow: hidden;
-    position: relative;
-    margin: 0 0.5rem;
 }
 
 .skill-progress {
     height: 100%;
     background: linear-gradient(135deg, #667eea, #764ba2);
-    border-radius: 15px;
+    border-radius: 4px;
     width: 0;
     transition: width 2s ease-in-out;
-    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
 }
 
 .skill-level {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #64748b;
     font-weight: 500;
-    min-width: 95px;
-    width: 95px;
     text-align: right;
-    flex-shrink: 0;
 }
 
 .certifications-section {
@@ -602,24 +567,17 @@ button:focus-visible,
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    ggrid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
-    justify-items: center;
-    width: 100%;
 }
 
 .backdrop-blur {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.95) !important;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1.5rem;
 }
 
-@supports not (backdrop-filter: blur(10px)) {
-    .backdrop-blur {
-        background: rgba(255, 255, 255, 0.8); 
-        backdrop-filter: none;
-    }
-}
 .project-card {
     border-radius: 1.5rem;
     overflow: hidden;
@@ -760,17 +718,12 @@ button:focus-visible,
 }
 
 .backdrop-blur {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.95) !important;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1.5rem;
 }
 
-@supports not (backdrop-filter: blur(10px)) {
-    .backdrop-blur {
-        background: rgba(255, 255, 255, 0.8); 
-        backdrop-filter: none;
-    }
-}
 .contact-info,
 .contact-form {
     border-radius: 1.5rem;
@@ -990,15 +943,6 @@ button:focus-visible,
         flex-direction: column;
         align-items: center;
     }
-}
-
-#projects,
-.projects-section,
-.projects-grid,
-.project-card {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-    visibility: visible !important;
 }
 
 .project-card {
