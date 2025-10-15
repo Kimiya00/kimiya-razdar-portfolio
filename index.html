@@ -55,8 +55,7 @@
             <div class="hero-content">
                 <div class="profile-image">
                     <picture>
-                        <source srcset="assets/images/kimiya-photo.webp" type="image/webp">
-                        <img src="assets/images/kimiya-photo.jpg" alt="Kimiya Razdar - Tech Professional" class="profile-img" loading="lazy">
+                        <img src="assets/images/kimiya-photo.jpg" alt="Kimiya Razdar - Tech Professional" class="profile-img">
                     </picture>
                 </div>
                 <h1 class="hero-title">Kimiya Razdar</h1>
@@ -91,10 +90,10 @@
 
     <!-- About Section -->
     <section id="about" class="about-section">
-        <div class="container backdrop-blur">
+            <div class="container section-box">
             <h2 class="section-heading">About Me</h2>
             <div class="about-grid">
-                <div class="about-text backdrop-blur">
+                <div class="about-text">
                     <h3 class="about-title">AI Operations Meets IT Infrastructure</h3>
                     <p class="about-description">
                         Background in Neuroscience (BS, UT Dallas, Cum Laude) with 4+ years building AI workflows and managing IT infrastructure. My thesis work in statistical analysis taught me how to find patterns in data, which translates directly to how I engineer AI prompts today. I've built 100+ production prompts that reduced process time by 25% while maintaining 99% system uptime.
@@ -102,9 +101,8 @@
                     <p class="about-description">
                          I create analytics dashboards, automate workflows, optimize campaigns (25% reach boost), and resolve 100+ support tickets monthly. I understand both how to design AI solutions and how to deploy them without breaking production systems.
                     </p>
-                    </p>
                 </div>
-                <div class="about-timeline backdrop-blur">
+                <div class="about-timeline">
                     <h3 class="timeline-title">Professional Journey</h3>
                     <div class="timeline">
                         <div class="timeline-item">
@@ -145,11 +143,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Skills Section -->
     <section id="skills" class="skills-section">
-        <div class="container backdrop-blur">
+        <div class="container section-box">
             <h2 class="section-heading">Technical Skills</h2>
             <div class="skills-grid">
                 <!-- Programming & Development -->
@@ -284,6 +283,9 @@
             <div class="certifications-section">
                 <h3 class="certifications-title">Certifications & Training</h3>
                 <div class="certifications-grid">
+                     <!-- Column 1: Completed -->
+                <div class="cert-column">
+                    <h4 class="cert-column-title">Completed</h4>
                     <div class="cert-item">
                         <span class="cert-name">ChatGPT Prompt Engineering for Developers</span>
                         <span class="cert-status completed">Completed</span>
@@ -292,6 +294,10 @@
                         <span class="cert-name">Google Prompting Essentials Certificate</span>
                         <span class="cert-status completed">Completed</span>
                     </div>
+                </div>
+                <!-- Column 2: Near Completion -->
+                <div class="cert-column">
+                    <h4 class="cert-column-title">Near Completion</h4>
                     <div class="cert-item">
                         <span class="cert-name">Microsoft Azure AI Fundamentals Certificate</span>
                         <span class="cert-status near-completion">Near Completion</span>
@@ -300,6 +306,10 @@
                         <span class="cert-name">Google IT Support Specialist</span>
                         <span class="cert-status near-completion">Near Completion</span>
                     </div>
+                </div>
+                <!-- Column 3: In Progress -->
+                <div class="cert-column">
+                    <h4 class="cert-column-title">In Progress</h4>
                     <div class="cert-item">
                         <span class="cert-name">HarvardX CS50</span>
                         <span class="cert-status in-progress">In Progress</span>
@@ -315,7 +325,8 @@
 
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
-        <div class="container backdrop-blur">
+        <div class="container">
+            <div class="section-box">
             <h2 class="section-heading">Featured Projects</h2>
             <div class="projects-grid">
                 <!-- Enhanced Calculator -->
@@ -465,14 +476,15 @@
                 </div>  
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
-        <div class="container backdrop-blur">
+        <div class="container">
             <h2 class="section-heading">Let's Connect</h2>
             <div class="contact-grid">
-                <div class="contact-info backdrop-blur">
+                <div class="contact-info">
                     <h3 class="contact-title">Let's Build Smarter Systems</h3>
                     <p class="contact-description">
                         I'm looking for roles in <strong>AI Operations, Prompt Engineering, IT Support, or AI Product Management</strong>. I bring 4+ years of IT experience and proven AI implementation skills (100+ production prompts, 25% efficiency gains, 99% uptime). I build AI workflows and manage technical infrastructure that actually works in production.
@@ -511,7 +523,7 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form backdrop-blur" id="contact-form">
+                <form class="contact-form" id="contact-form">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Your Name" required class="form-input">
                     </div>
@@ -532,7 +544,7 @@
 
     <!-- Footer -->
     <footer class="footer-section">
-        <div class="container backdrop-blur">
+        <div class="container">
             <div class="footer-content">
                 <p class="footer-text">&copy; <span id="current-year"></span> Kimiya Razdar. Built with passion and continuous learning.</p>
                 <p class="footer-tagline">Transforming challenges into solutions, one line of code at a time.</p>

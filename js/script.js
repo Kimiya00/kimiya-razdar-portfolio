@@ -139,13 +139,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 animateStats();
             }
 
-                // Add fade-in animation    
+                // Add fade-in animation with delay for projects   
+                setTimeout(() => {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-    
+            }, 100);
+        
+            // Unobserve after animation
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
     // Observe sections for animations
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {

@@ -297,7 +297,8 @@ button:focus-visible,
     margin-bottom: 3rem;
     position: relative;
     padding-bottom: 1rem;
-    color: white;
+    color: #1e293b;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .section-heading::after {
@@ -310,6 +311,15 @@ button:focus-visible,
     height: 4px;
     background: linear-gradient(135deg, #667eea, #764ba2);
     border-radius: 2px;
+}
+
+.section-box {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1.5rem;
+    padding: 3rem 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 /* ==========================================================================
@@ -328,13 +338,6 @@ button:focus-visible,
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 1.5rem;
-}
-
-.about-text,
-.about-timeline {
-    border-radius: 1.5rem;
-    padding: 2rem;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .about-title,
@@ -426,12 +429,6 @@ button:focus-visible,
     border-radius: 1.5rem;
 }
 
-.skills-section .container {
-    border-radius: 2rem;
-    padding: 3rem 2rem;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-}
-
 .skills-section .section-heading {
     color: #1e293b;
 }
@@ -515,8 +512,23 @@ button:focus-visible,
 
 .certifications-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.cert-column {
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
+}
+
+.cert-column-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(102, 126, 234, 0.2);
 }
 
 .cert-item {
@@ -567,7 +579,7 @@ button:focus-visible,
 
 .projects-grid {
     display: grid;
-    ggrid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
 }
 
@@ -579,6 +591,7 @@ button:focus-visible,
 }
 
 .project-card {
+    background: #FFFFFF;
     border-radius: 1.5rem;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -710,6 +723,19 @@ button:focus-visible,
    CONTACT SECTION
    ========================================================================== */
 
+.contact-section {
+    color: #e2e8f0;
+}
+
+.contact-section .section-heading,
+.contact-section .contact-title {
+    color: #FFFFFF;
+}
+
+.contact-section .contact-description {
+    color: #cbd5e1;
+}
+
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -726,9 +752,12 @@ button:focus-visible,
 
 .contact-info,
 .contact-form {
-    border-radius: 1.5rem;
+    background: transparent;
+    border: none;
+    border-radius: 0;
     padding: 2rem;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+    color: #ffffff;
 }
 
 .contact-title {
@@ -809,6 +838,7 @@ button:focus-visible,
     background: rgba(30, 41, 59, 0.9);
     backdrop-filter: blur(10px);
     padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-content {
@@ -912,16 +942,7 @@ button:focus-visible,
 }
 
 @media (max-width: 480px) {
-    #projects,
-    .projects-section,
-    .projects-grid,
-    .project-card {
-        opacity: 1 !important;
-        transform: translateY(0) !important;
-        visibility: visible !important;
-        display: grid !important;  
-        transition: none !important;  
-    }
+     
     .nav-floating {
         position: relative;
         top: 0;
