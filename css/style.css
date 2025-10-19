@@ -35,7 +35,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 2rem;
 }
@@ -255,13 +255,6 @@ button:focus-visible,
     text-align: center;
 }
 
-.stat-number {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #667eea;
-}
-
 .stat-label {
     font-size: 0.9rem;
     color: #64748b;
@@ -322,13 +315,28 @@ button:focus-visible,
     border-radius: 1.5rem;
     padding: 3rem 2rem;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 
 /* ==========================================================================
    ABOUT SECTION
    ========================================================================== */
+
+.about-section .section-heading,
+.projects-section .section-heading,
+.contact-section .section-heading {
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.about-section .section-heading::after,
+.projects-section .section-heading::after,
+.contact-section .section-heading::after {
+    background: white;
+}
 
 .about-grid {
     display: grid;
@@ -651,7 +659,7 @@ button:focus-visible,
     background: rgba(102, 126, 234, 0.9);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -919,11 +927,7 @@ button:focus-visible,
         margin-bottom: 2rem;
     }
     
-    .container {
-        padding: 0 1rem;
-    }
-    
-     .skills-grid {
+    .skills-grid {
         grid-template-columns: 1fr;
     }
 
