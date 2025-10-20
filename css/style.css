@@ -951,6 +951,14 @@ button:focus-visible,
    ========================================================================== */
 
 @media (max-width: 768px) {
+    
+    .about-text,
+    .about-timeline,
+    .contact-info,
+    .contact-form {
+        padding: 1.5rem 1rem;
+    }
+
     .nav-container {
         gap: 1rem;
         flex-wrap: wrap;
@@ -1030,7 +1038,19 @@ button:focus-visible,
     .skills-section .content-wrapper {
         max-width: 900px;
         margin: 0 auto;
-        padding: 0 2rem;
+        padding: 0 1rem;
+    }
+
+    .skills-section .section-box {
+    padding: 2rem 1rem;
+    }
+
+    .skill-category {
+        padding: 0.75rem;  
+    }
+    
+    .skills-grid {
+        gap: 1rem;  
     }
 
     .section-box {
@@ -1040,6 +1060,16 @@ button:focus-visible,
     
     .cert-column {
         margin-bottom: 1.5rem;
+    }
+
+    .about-text,
+    .about-timeline {
+    padding: 1.5rem 1rem; 
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 1.5rem 1rem; 
     }
 
 }
@@ -1073,6 +1103,21 @@ button:focus-visible,
         flex-direction: column;
         align-items: center;
     }
+
+    .skill-item {
+    grid-template-columns: 1fr; 
+    gap: 0.5rem;
+    text-align: left;
+    }
+
+    .skill-bar {
+        width: 100%;
+    }
+
+    .skill-level {
+        text-align: left;
+    }
+
 }
 
 .project-card {
