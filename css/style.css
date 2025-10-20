@@ -1026,11 +1026,6 @@ button:focus-visible,
         margin-bottom: 2rem;
     }
 
-    .skill-category {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
     .skills-section .container {
         padding: 2rem 1.5rem;
     }
