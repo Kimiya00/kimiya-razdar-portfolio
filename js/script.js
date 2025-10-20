@@ -151,6 +151,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Observe sections for animations
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
+        // Skip hero section from fade-in animation
+    if (section.classList.contains('hero-section')) return;
+    
         // Set initial state for animation
         section.style.opacity = '0';
         section.style.transform = 'translateY(30px)';

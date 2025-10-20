@@ -330,6 +330,7 @@ button:focus-visible,
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
 .about-section .section-heading::after,
@@ -985,9 +986,4 @@ button:focus-visible,
 
 .project-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.projects-section {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
 }
