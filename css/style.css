@@ -34,6 +34,12 @@ body {
     min-height: 100vh;
 }
 
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 .container {
     max-width: 900px;
     margin: 0 auto;
@@ -329,8 +335,7 @@ button:focus-visible,
     background: white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+    background-clip: text; 
 }
 
 .about-section .section-heading::after,
