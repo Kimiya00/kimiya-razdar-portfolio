@@ -420,6 +420,16 @@ button:focus-visible,
     background: linear-gradient(135deg, #667eea, #764ba2);
 }
 
+.about-grid .card,
+.about-grid .section-box {
+    background: none;
+    border: 1px solid rgba(102, 126, 234, 0.1); 
+    border-radius: 1rem; 
+    padding: 1.5rem;      
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+    width: 100%;  
+}
+
 .about-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -521,6 +531,21 @@ button:focus-visible,
 }
 
 /* ==========================================================================
+   ABOUT & SKILLS SECTION - match width with hero
+   ========================================================================== */
+
+.about-section .content-wrapper,
+.skills-section .content-wrapper {
+    max-width: 900px; 
+    margin: 0 auto;
+    padding: 0 2rem; 
+}
+
+.about-grid .card,
+.skills-grid .card {
+    width: 100%; 
+
+/* ==========================================================================
    SKILLS SECTION
    ========================================================================== */
 
@@ -529,6 +554,7 @@ button:focus-visible,
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
     margin-bottom: 2rem;
+    padding: 0 1.5rem;
 }
 
 .skill-category {
@@ -536,6 +562,8 @@ button:focus-visible,
     border: 1px solid rgba(102, 126, 234, 0.1);
     border-radius: 1rem;
     padding: 1rem;
+    width: 100%;         
+    box-sizing: border-box;
 }
 
 .skill-category-title {
@@ -1001,6 +1029,13 @@ button:focus-visible,
     
     .skills-grid {
         grid-template-columns: 1fr;
+        padding: 0 1rem;  
+        gap: 1.5rem;
+    }
+
+    .skill-category {
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .skills-section .container {
@@ -1057,4 +1092,4 @@ button:focus-visible,
 
 .project-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+}}
