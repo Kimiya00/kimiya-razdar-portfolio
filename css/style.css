@@ -362,7 +362,7 @@ button:focus-visible,
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 1.5rem;
-    padding: 2rem;
+    padding: 1.5rem;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     height: 100%;
 }
@@ -610,6 +610,8 @@ button:focus-visible,
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .project-card {
@@ -760,7 +762,7 @@ button:focus-visible,
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 1.5rem;
-    padding: 2rem;
+    padding: 1.5rem;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     height: 100%;
 }
@@ -916,8 +918,12 @@ button:focus-visible,
 
     .about-grid,
     .contact-grid {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 2rem;
+        align-items: start;
+        max-width: 900px;
+        margin: 0 auto;  
     }
     
     .projects-grid {
@@ -979,4 +985,9 @@ button:focus-visible,
 
 .project-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects-section {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
