@@ -35,9 +35,9 @@ body {
 }
 
 .content-wrapper {
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 2rem;
 }
 
 .container {
@@ -319,7 +319,7 @@ button:focus-visible,
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 1.5rem;
-    padding: 3rem 2rem;
+    padding: 3rem 0;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     width: 100%;
     margin: 0 auto;
@@ -453,7 +453,6 @@ button:focus-visible,
 .projects-section .section-heading {
     margin-bottom: 3rem;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .projects-section .section-heading::after {
