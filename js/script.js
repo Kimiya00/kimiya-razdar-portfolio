@@ -128,6 +128,14 @@ document.addEventListener('DOMContentLoaded', function() {
         rootMargin: '0px 0px -10% 0px'
     };
     
+
+    // Helper function for fade-in 
+
+    function fadeInElement(el) {
+    el.style.opacity = '1';
+    el.style.transform = 'translateY(0)';
+}
+
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -137,15 +145,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (entry.target.classList.contains('about-section')) {
                     animateStats();
                 }
-                // Ensure projects section becomes visible
-                if (entry.target.classList.contains('projects-section')) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
 
-                // Add fade-in animation  
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                fadeInElement(entry.target);
         
             // Unobserve after animation
             observer.unobserve(entry.target);
@@ -165,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
         section.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
         section.style.minHeight = '100px';
 
-        observer.observe(section);
+        throttle(() => observer.observe(section), 50)();
     });
     
     // ==========================================================================
