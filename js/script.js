@@ -4,6 +4,9 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     
+    // Initialize EmailJS
+    emailjs.init('g0ZuAUAI8RNlO9Q-7');
+
     // ==========================================================================
     // TYPING ANIMATION
     // ==========================================================================
@@ -227,20 +230,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Simulate form submission
-            showNotification('Message received! I\'ll respond faster than my code compiles.', 'success');
-
-            // Reset form
+             // Send via EmailJS
+        emailjs.send('service_mqhsx3o', 'template_ntcul9t', {
+            from_name: name,
+            from_email: email,
+            subject: subject,
+            message: message
+        }, 'g0ZuAUAI8RNlO9Q-7')
+        .then(() => {
+            showNotification('Message sent! I\'ll respond faster than my code compiles.', 'success');
             this.reset();
-
-            // TODO: Integrate EmailJS when ready
-            console.log('Form submitted:', {
-                name: name,
-                email: email,
-                subject: subject
+        })
+        .catch(() => {
+            showNotification('Failed to send message. Please email me directly.', 'error');
         });
-        });
-    }
+    });
+}
     
     // ==========================================================================
     // EMAIL VALIDATION
