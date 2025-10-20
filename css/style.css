@@ -422,9 +422,11 @@ button:focus-visible,
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     align-items: start;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .about-text,
@@ -816,6 +818,8 @@ button:focus-visible,
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     align-items: start;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .contact-info,
